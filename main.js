@@ -1,4 +1,4 @@
 const hobbies = ['sports', 'cooking'];
 
-console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+hobbies.push('programming');
 console.log(hobbies);
