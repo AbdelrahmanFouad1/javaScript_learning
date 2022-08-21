@@ -1,16 +1,10 @@
-const name = 'Abdo';
-let age = 25;
-const isMarried = false;
+const person = {
+    'name': 'Alex',
+    'age': 30,
+    'isMarried': false,
+    greet (){
+        console.log('Hello '+ this.name);
+    }
+};
 
-age = 30;
-
-
-const summarizeUser = (userName, userAge, userIsMarried) => {
-    return 'Name is ' + userName + ', age is ' + userAge + ' and isMarried is ' + userIsMarried;
-}
-
-const add = (a, b) => a + b;
-
-console.log(add(1, 2));
-
-console.log(summarizeUser(name, age, isMarried));
+person.greet();
