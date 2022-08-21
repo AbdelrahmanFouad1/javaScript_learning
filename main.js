@@ -1,10 +1,4 @@
-const person = {
-    'name': 'Alex',
-    'age': 30,
-    'isMarried': false,
-    greet (){
-        console.log('Hello '+ this.name);
-    }
-};
+const hobbies = ['sports', 'cooking'];
 
-person.greet();
+console.log(hobbies.map(hobby => 'Hobby: ' + hobby));
+console.log(hobbies);
