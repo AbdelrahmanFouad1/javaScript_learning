@@ -1,21 +1,24 @@
-const person = {
-    name: 'Alex',
-    age: 30,
-    isMarried : false,
-    greet (){
-        console.log('Hello '+ this.name);
-    }
+const fetchData = () => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Done');
+        }, 1500);
+    });
+
+    return promise;
 };
 
-const {name, age} = person;
-console.log(name, age);
 
-// person.greet();
 
-const hobbies = ['sports', 'cooking'];
+setTimeout(() => {
+    console.log('Timer done');
+    fetchData().then(text => {
+        console.log(text);
+        return fetchData();
+    }).then(text2 => {
+        console.log(text2);
+    });
+}, 2000);
 
-const [hoby1, hoby2] = hobbies;
-console.log(hoby1, hoby2);
-
-// hobbies.push('programming');
-// console.log(hobbies);
+console.log('Hello');
+console.log('Hi');
